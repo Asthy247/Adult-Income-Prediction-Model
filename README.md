@@ -31,6 +31,7 @@ The presence of "?" in the data indicates missing values and this was processed 
 **•	hours-per-week**: The average number of hours worked per week is around 40, with a standard deviation of 12.39.
 
 **Demographic Composition of the Dataset**
+
 workclass: Most individuals are employed in the private sector. 
 
  education: A significant portion of individuals have a high school diploma. 
@@ -48,6 +49,7 @@ native-country: The majority of individuals are from the United States.
 income: More individuals earn less than or equal to $50K per year.
 
 **Analyzing the workclass Column**
+
 The workclass column categorizes individuals based on their employment status. 
 
 The output you provided shows the frequency of each category:
@@ -59,11 +61,13 @@ The output you provided shows the frequency of each category:
 •	**Local-gov:** Individuals working for local government.
 
 **Analyzing the Occupation Column**
+
 The occupation column categorizes individuals based on their occupation. 
 
 As you've observed, the "Prof-specialty" occupation is the most frequent, followed by "Craft-repair" and "Exec-managerial".
 
 **Analyzing the native-country Column**
+
 The native-country column provides information about the country of origin of individuals. 
 
 As you can see, the majority of individuals in the dataset are from the United States. 
@@ -91,9 +95,11 @@ The fact that the mean is slightly to the right of the median indicates that the
 ![image](https://github.com/user-attachments/assets/5594bd44-e5e5-4e4a-8a73-90a83d1f8b80)
 
 **Histogram:** 
+
 The histogram confirms the right-skewed nature of the age distribution, indicating a larger proportion of younger individuals in the dataset.
 
 **Box Plot:**
+
 The box plot highlights the presence of outliers, individuals with exceptionally high ages.
 
 The box represents the interquartile range (IQR), which contains 50% of the data. The median (Q2) is visible as a line within the box.
@@ -101,6 +107,7 @@ The box represents the interquartile range (IQR), which contains 50% of the data
 The whiskers extend to 1.5 times the IQR from the quartiles, indicating the range of non-outlier data.
 
 **Key Observations from the Filtered Dataset for Age Column:**
+
 **Age Range:** The filtered data primarily consists of individuals aged 79 and above.
 	
 **Workclass:** A variety of work classes are represented, including private sector, self-employed, and government jobs.
@@ -122,25 +129,31 @@ The whiskers extend to 1.5 times the IQR from the quartiles, indicating the rang
 ![image](https://github.com/user-attachments/assets/9c98e704-8493-4022-9e0e-6b083af346ed)
 
 **Key Observations:**
+
 **Dominance of Private Sector:** The "Private" workclass has the highest number of individuals, followed by "Self-emp-not-inc" and "Local-gov".
 
 **Income Disparity**: The distribution of income levels (<=50K and >50K) varies across different workclasses.
 
 **Private Sector:** The majority of individuals in the private sector earn less than or equal to $50K.
 
-**Self-Employed:** Self-employed individuals (both incorporated and not incorporated) seem to have a higher proportion of those earning more than $50K compared to other workclasses.
+**Self-Employed:** Self-employed individuals (both incorporated and not incorporated) 
 
-**	Government Jobs:** Individuals working in local, state, and federal government jobs have a relatively lower proportion of high earners.
+seem to have a higher proportion of those earning more than $50K compared to other workclasses.
+
+**Government Jobs:** Individuals working in local, state, and federal government jobs have a relatively lower proportion of high earners.
 
 **Without Pay and Never-Worked: **These categories naturally have lower income levels.
 
 # Education and Education Num Data Analysis
+
 **Analysis on Education**
+
 <img width="108" alt="image" src="https://github.com/user-attachments/assets/f8fc924b-2c61-417d-84c6-d16e4fbdb995">
 
 After the analysis, here are the key takeaways:
 
 •	The data suggests a strong correlation between education level and the number of years spent in education.
+
 •	"HS-grad" (High School graduate) is the most common education level, followed by "Some-college".
 
 # Marital Status Data Analysis
@@ -162,15 +175,16 @@ The most common status is "Married-civ-spouse," indicating a significant number 
 # Occupation Data Analysis
 
 ![image](https://github.com/user-attachments/assets/b7ca5a8f-1892-45ad-aee1-afb4c049ca96)
+
 **Dominant Occupations:** The plot reveals that "Prof-specialty" and "Craft-repair" are the most common occupations in the dataset.
 
-	****Income Disparity:**** There's a clear distinction in income levels across different occupations:
+****Income Disparity:**** There's a clear distinction in income levels across different occupations:
 
 **Higher-Income Occupations:** Occupations like "Exec-managerial" and "Prof-specialty" have a higher proportion of individuals earning more than $50K.
 
-	****Lower-Income Occupations**:** Occupations like "Handlers-cleaners", "Farming-fishing", and "Priv-house-serv" have a higher proportion of individuals earning less than or equal to $50K.
+****Lower-Income Occupations**:** Occupations like "Handlers-cleaners", "Farming-fishing", and "Priv-house-serv" have a higher proportion of individuals earning less than or equal to $50K.
 
-**	Mixed Income: **Some occupations, such as "Craft-repair" and "Machine-op-inspct," have a more balanced distribution of income levels.
+**Mixed Income: **Some occupations, such as "Craft-repair" and "Machine-op-inspct," have a more balanced distribution of income levels.
 
 # Relationship Data Analysis
 
@@ -277,6 +291,7 @@ This can be done based on geographic region (e.g., "Central America"), economic 
 • ** Eliminating Countries:** If certain countries have very low counts, you can eliminate them from the plot to focus on the more prominent ones. Here are some approaches:
 
 # Data Transformation
+
 The value_counts() output shows that the dataset is now primarily divided into two categories: "United-States" and "Others." This simplification can be useful for certain 
 
 analyses, especially when focusing on the distinction between US citizens and non-US citizens.
@@ -314,14 +329,17 @@ analyses, especially when focusing on the distinction between US citizens and no
 •	**Weak Correlations**: Most of the correlations between the numerical variables are weak, as indicated by the values close to 0.
 
 **•	Positive Correlation: **
+
 o	educational-num and capital-gain have a moderate positive correlation, suggesting that individuals with higher education tend to have higher capital gains.
 
 o	educational-num and hours-per-week also show a moderate positive correlation, indicating that individuals with higher education might work more hours.
 
 •**	Negative Correlation: **
+
 o	age and fnlwgt have a weak negative correlation, suggesting that older individuals might have lower final weights.
 
 # Pairplot for the Numerical Variables
+
 ![image](https://github.com/user-attachments/assets/211c2eb1-d249-4cb5-b682-c851b234f5b1)
 
 **Key Observations from the Pairplot:**
@@ -348,31 +366,52 @@ o	Education and Income: There's a positive correlation between education level a
 
 o	Capital Gains/Losses and Income: Individuals with higher capital gains or lower capital losses are more likely to have higher incomes.
 
-o	Hours-per-week and Income: There's a weak positive correlation between hours worked per week and income. However, the relationship is not very strong, suggesting that other factors might play a more significant role in determining income.
+o	Hours-per-week and Income: There's a weak positive correlation between hours worked per week and income. 
+
+However, the relationship is not very strong, suggesting that other factors might play a more significant role in determining income.
 
 **3.	Income Disparity:**
-o	The color coding based on income level helps visualize the income disparity across different variables. For example, individuals with higher capital gains and more education tend to have higher incomes.
+
+o	The color coding based on income level helps visualize the income disparity across different variables. 
+
+For example, individuals with higher capital gains and more education tend to have higher incomes.
 
 # Pie chart of Income
+
 The pie chart visually represents the distribution of income levels in the dataset. 
 
 ![image](https://github.com/user-attachments/assets/86100dd6-1d24-447e-b0b5-6f969aafc904)
 
 **Here are the key takeaways:**
-	Dominance of Lower Income: The majority of individuals in the dataset (76.1%) have an income of less than or equal to $50K per year.
+
+Dominance of Lower Income: The majority of individuals in the dataset (76.1%) have an income of less than or equal to $50K per year.
 
 Minority of Higher Income: A smaller proportion (23.9%) of individuals earn more than $50K per year.
 
 # Analyzing the Data Split and Feature Engineering
+
 **Data Split:**
-The data is correctly splited into training and testing sets using train_test_split. The test_size=0.10 parameter indicates that 10% of the data will be used for testing, while the remaining 90% will be used for training. The stratify=y parameter ensures that the class distribution (income levels) is preserved in both the training and testing sets. This is important for handling imbalanced datasets.
+
+The data is correctly splited into training and testing sets using train_test_split. 
+
+The test_size=0.10 parameter indicates that 10% of the data will be used for testing, while the remaining 90% will be used for training. 
+
+The stratify=y parameter ensures that the class distribution (income levels) is preserved in both the training and testing sets. 
+
+This is important for handling imbalanced datasets.
 
 **Categorical and Numerical Features:**
-I have correctly identified the categorical and numerical features in the dataset. Categorical features are those that represent categories or groups, while numerical features are those that represent quantities.
+
+I have correctly identified the categorical and numerical features in the dataset. 
+
+Categorical features are those that represent categories or groups, while numerical features are those that represent quantities.
 
 # Modelling
 # Logistic Regression Model to predict Income Levels
-Overall, the code demonstrates a well-defined approach to building and tuning a Logistic Regression model for income level prediction. It incorporates feature preprocessing, addresses class imbalance, and performs hyperparameter tuning to optimize model performance.
+
+Overall, the code demonstrates a well-defined approach to building and tuning a Logistic Regression model for income level prediction.
+
+It incorporates feature preprocessing, addresses class imbalance, and performs hyperparameter tuning to optimize model performance.
 
 ![image](https://github.com/user-attachments/assets/8e9617d7-82d5-4a02-aac1-4600b2d5a8c5)
 
@@ -383,6 +422,7 @@ Overall, the code demonstrates a well-defined approach to building and tuning a 
 •	It learns a decision boundary that separates the two classes based on the input features.
 
 **Overall Process:**
+
 Data is fed into the pipeline.
 	
 Numerical features are standardized.
@@ -408,11 +448,13 @@ This means that, on average, the model correctly predicted the income level for 
 indicating that the model is able to generalize well to unseen data.
 
 # Analyzing the Model Performance
+
 A confusion matrix is a table that is often used to describe the performance of a classification model on a set of test data for a specific problem. It is a table with 2
 
 rows and 2 columns that report the number of correct and incorrect predictions.   
 
 **Key Metrics:**
+
 •**	Accuracy:** Overall, how often is the model correct?
 
 •	**Precision**: Of the positive predictions, how many are actually positive?
@@ -499,9 +541,12 @@ we have a Precision-Recall curve with an Average Precision (AP) of 0.76. Here's 
 **•	Recall:** This measures the proportion of actual positive cases that are correctly identified. A higher recall indicates fewer false negatives.
 
 **Key Observations:**
+
 **•	Trade-off between Precision and Recall: **As precision increases, recall tends to decrease, and vice versa. This is a common trade-off in classification models.
 
-**•	AP Score:** The Average Precision (AP) score is a measure of the model's performance across different threshold settings. An AP of 0.76 indicates reasonable performance, but there's room for improvement.
+**•	AP Score:** The Average Precision (AP) score is a measure of the model's performance across different threshold settings. 
+
+An AP of 0.76 indicates reasonable performance, but there's room for improvement.
 
 # Key Research Questions and Answers
 
@@ -528,22 +573,27 @@ we have a Precision-Recall curve with an Average Precision (AP) of 0.76. Here's 
 **Answer: **There's a weak positive correlation between hours worked and income. However, long hours alone don't guarantee high income.
 
 # Recommendation
+
 **Data and Preprocessing Recommendations:**
 
 **1.	Handle Missing Values:** Implement appropriate strategies to handle missing values, such as imputation or removal.
 
 **2.	Feature Engineering:** 
+
 o	Create new features that capture relevant information, such as interaction terms between variables.
 
 o	Consider using techniques like one-hot encoding for categorical variables.
 
 o	Normalize or standardize numerical features to improve model performance.
 
-**3. Address Class Imbalance: **Employ techniques like oversampling, undersampling, or class weighting to handle the imbalance in the target variable.
+**3. Address Class Imbalance: 
+
+**Employ techniques like oversampling, undersampling, or class weighting to handle the imbalance in the target variable.
 
 **4.	Data Quality: **Ensure data quality by checking for inconsistencies, outliers, and errors.
 
 **Model Selection and Training Recommendations:**
+
 Experiment with Different Algorithms: Explore other algorithms like XGBoost, Random Forest, or Support Vector Machines to potentially improve performance.
 	
 Hyperparameter Tuning: Use techniques like Grid Search or Randomized Search to optimize hyperparameters.
@@ -561,6 +611,7 @@ Visualize Model Performance: Use techniques like confusion matrices, ROC curves,
 Interpret Model Predictions: Use techniques like SHAP values or partial dependence plots to understand the factors influencing the model's predictions.
 
 # Conclusion
+
 This project provides a valuable exploration of income inequality in the Adult Income Dataset. 
 
 The analysis revealed key insights into the relationships between various factors and income levels. 
